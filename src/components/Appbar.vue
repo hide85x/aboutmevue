@@ -27,10 +27,10 @@
           </v-list-item></a> 
         </v-list>
         <v-divider></v-divider>
-        <v-list-item-group active-class="pink--text "  v-for="i in icons" :key="i.i">
+        <v-list-item-group  v-for="i in icons" :key="i.i">
         <a target="blank" :href="i.link">  <v-list-item id="item" class="d-flex-row">
            <v-list-item-icon  class="my-6">
-            <v-icon id="icon" py-15 large>{{i.i}}</v-icon>
+            <v-icon id="item" py-15 large>{{i.i}}</v-icon>
             </v-list-item-icon>
             <v-list-item-title>{{i.txt}}</v-list-item-title>
           </v-list-item></a>
@@ -52,11 +52,13 @@
       <!-- <v-toolbar-title  class="d-md-none d-flex" >Get in Touch!</v-toolbar-title> -->
 
       <div class="ml-auto align-self-end">
+          <a href="#" target="blank">
         <v-btn v-for="l in links" id="links" :key="l.id" class="mx-11 pa-6 black white--text" icon>
           <a href="#" target="blank">
-            <v-icon class="ml-14" id="icon" size="15px">{{l}}</v-icon>
+            <v-icon class="ml-14" id="icon" size="17px">{{l}}</v-icon>
           </a>
         </v-btn>
+        </a>
       </div>
     </v-app-bar>
     <v-sheet id="scrolling-techniques" class="overflow-y-auto"></v-sheet>
@@ -118,7 +120,7 @@ color: rgb(255, 0, 128) !important;
 
   #links {
     margin: 0 !important;
-    margin: 0 10px !important;
+    margin: 0 12px !important;
   }
   #icon {
     font-size: 10px !important;

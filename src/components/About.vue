@@ -4,9 +4,6 @@
     <v-img src="../assets/pics/me.jpg" 
   cover
     width=25% 
-    
-    
-    
     ></v-img>
 
 

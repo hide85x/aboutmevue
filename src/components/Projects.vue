@@ -32,16 +32,24 @@
     </v-slide-group>
 
     <v-expand-transition>
-      <v-sheet v-if="model != null" class="white--text" color="grey darken-3" height="200" tile>
-        <v-row class="d-flex flex-column align-center">
-          <h3 class="title py-2">{{x.title}}</h3>
-          <p>{{x.text}}</p>
+      <v-sheet v-if="model != null" class="align-center" color="grey darken-4" height="300" tile>
+        <v-row class="d-flex flex-column align-center pa-1 text-center">
+          <v-card-title primary-title class="my-0 py-0">
+            {{x.title}}
+          </v-card-title>
+          <v-card-text id="content" class="overline px-6 text-caption">{{x.text}}</v-card-text>
           <div class="d-flex">
-         <v-btn  icon rounded class="mx-4 pa-6 black white--text"><a target="blank" :href="x.live"><v-icon id="i" size="34">mdi-movie-open-outline</v-icon></a></v-btn> 
-         <v-btn  icon rounded class="mx-4 pa-6 black white--text"><a target="blank" :href="x.git"><v-icon id="i" size="34">mdi-github</v-icon></a></v-btn> 
-
+            <v-btn icon rounded class="mx-2 pa-6 black white--text">
+              <a target="blank" :href="x.live">
+                <v-icon id="i" size="34">mdi-movie-open-outline</v-icon>
+              </a>
+            </v-btn>
+            <v-btn icon rounded class="mx-2 pa-6 black white--text">
+              <a target="blank" :href="x.git">
+                <v-icon id="i" size="34">mdi-github</v-icon>
+              </a>
+            </v-btn>
           </div>
-          
         </v-row>
       </v-sheet>
     </v-expand-transition>
@@ -61,32 +69,39 @@ export default {
         text: `My first project. There is a really cool boardgame called Scythe, but when you finish the game it
                 takes a lot of time to count your points
                 ,so I made this website to make it really easy!`,
-                git:"https://github.com/hide85x/Scythulator",
-                live: "https://hide85x.github.io/Scythulator/"
+        git: "https://github.com/hide85x/Scythulator",
+        live: "https://hide85x.github.io/Scythulator/",
       },
       {
         src: require("../assets/pics/NotenGoThumb.jpg"),
-        text: "sameasdasdasdsadday",
-        git: "https://github.com/hide85x/Note-nGo", 
-        live: "https://intense-shelf-54991.herokuapp.com/users/register"
+        title: "NoteN'Go",
+        text: `This webapp is using MongoDb database and node js environment to create, register and login user, manage and destroy your every day notes.`,
+        git: "https://github.com/hide85x/Note-nGo",
+        live: "https://intense-shelf-54991.herokuapp.com/users/register",
       },
       {
         src: "https://hide85x.github.io/aboutMeLipiec/pics/kako.jpg",
-        text: "same shit duifferent day",
-             git: "https://github.com/hide85x/KaKo" , 
-        live: "https://hide85x.github.io/KaKo/?fbclid=IwAR1YsQn00GKRIQ7rLUE-JPvpi08bPd09pniiC-F9FbL3bDv4WAEWWU5oX4s"
+        title:"KaKo",
+        text:
+          "Just a simple webpage I made for my friend english clasess, actually this is my first project written for somebody",
+        git: "https://github.com/hide85x/KaKo",
+        live:
+          "https://hide85x.github.io/KaKo/?fbclid=IwAR1YsQn00GKRIQ7rLUE-JPvpi08bPd09pniiC-F9FbL3bDv4WAEWWU5oX4s",
       },
       {
         src: require("../assets/pics/spacer L.jpg"),
-        text: "DUPA",
-             git: "https://github.com/hide85x/spacer", 
-        live: "https://vibrant-hugle-b2c0c8.netlify.app/"
+        title:"Spacer",
+        text:
+          "Web app made with use of VueJs and NASA API to look for and show cool space related stuff!",
+        git: "https://github.com/hide85x/spacer",
+        live: "https://vibrant-hugle-b2c0c8.netlify.app/",
       },
       {
         src: require("../assets/pics/badumThumb.jpg"),
-        text: "Chuj",
-             git: "https://github.com/hide85x/BaDumTss" , 
-        live: "https://hide85x.github.io/BaDumTss/"
+        title: "BaDumTsss",
+        text:"For all the musicians out there! This website gives you oportunity to lay down some fat beats! ",
+        git: "https://github.com/hide85x/BaDumTss",
+        live: "https://hide85x.github.io/BaDumTss/",
       },
     ],
   }),
@@ -114,7 +129,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @media (max-width: 600px) {
   #card {
     width: 300px !important;
@@ -124,9 +138,9 @@ export default {
   }
 }
 #i {
-  color:white;
-  &:hover{
-  color: rgb(255, 0, 128) !important;
-}
+  color: white;
+  &:hover {
+    color: rgb(255, 0, 128) !important;
+  }
 }
 </style>
