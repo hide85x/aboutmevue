@@ -1,5 +1,5 @@
 <template >
-  <v-card width="100%">
+  <v-card width="100%" id="aboutme">
     <v-navigation-drawer
       id="drawer"
       overlay-color="black"
@@ -52,13 +52,11 @@
       <!-- <v-toolbar-title  class="d-md-none d-flex" >Get in Touch!</v-toolbar-title> -->
 
       <div class="ml-auto align-self-end">
-          <a href="#" target="blank">
         <v-btn v-for="l in links" id="links" :key="l.id" class="mx-11 pa-6 black white--text" icon>
-          <a href="#" target="blank">
+          <a :href="'#'+l" >
             <v-icon class="ml-14" id="icon" size="17px">{{l}}</v-icon>
           </a>
         </v-btn>
-        </a>
       </div>
     </v-app-bar>
     <v-sheet id="scrolling-techniques" class="overflow-y-auto"></v-sheet>

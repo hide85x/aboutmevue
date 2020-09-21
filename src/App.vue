@@ -54,6 +54,7 @@ export default {
 <style lang="scss" >
 html, *, body {
   box-sizing: border-box  !important;
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none !important;

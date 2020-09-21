@@ -1,4 +1,4 @@
-<template>
+<template >
   <v-card id="about" dark rounded="0" class="justify-center d-flex flex-row " >
     
     <v-img src="../assets/pics/me.jpg" 

@@ -1,5 +1,5 @@
-<template>
-  <v-sheet class="mx-auto white--text" dark elevation="8" width="100%">
+<template >
+  <v-sheet id="projects" class="mx-auto white--text" dark elevation="8" width="100%">
     <v-card-title class="justify-center text-center" primary-title>let's talk about what I do</v-card-title>
     <v-card-text id="content" class="overline pa-6 text-center">
       For over a year now, through various crash courses, books, youtube lectures, IT meetings and
@@ -38,7 +38,7 @@
             {{x.title}}
           </v-card-title>
           <v-card-text id="content" class="overline px-6 text-caption">{{x.text}}</v-card-text>
-          <div class="d-flex">
+          <div class="d-inline-flex align-items-end">
             <v-btn icon rounded class="mx-2 pa-6 black white--text">
               <a target="blank" :href="x.live">
                 <v-icon id="i" size="34">mdi-movie-open-outline</v-icon>
@@ -63,14 +63,12 @@ export default {
     active: true,
     model: null,
     projects: [
-      {
-        src: require("../assets/pics/scythThumb.jpg"),
-        title: "Scythulator",
-        text: `My first project. There is a really cool boardgame called Scythe, but when you finish the game it
-                takes a lot of time to count your points
-                ,so I made this website to make it really easy!`,
-        git: "https://github.com/hide85x/Scythulator",
-        live: "https://hide85x.github.io/Scythulator/",
+       {
+        src: require("../assets/pics/Screenshot_3.png"),
+        title: "Rick And Morty Search App",
+        text:"Web app made with vue and rick and morty Rest API",
+        git: "https://github.com/hide85x/RickAndMortySearch",
+        live: "https://fervent-feynman-abe57c.netlify.app/",
       },
       {
         src: require("../assets/pics/NotenGoThumb.jpg"),
@@ -102,6 +100,16 @@ export default {
         text:"For all the musicians out there! This website gives you oportunity to lay down some fat beats! ",
         git: "https://github.com/hide85x/BaDumTss",
         live: "https://hide85x.github.io/BaDumTss/",
+      },
+     
+      {
+        src: require("../assets/pics/scythThumb.jpg"),
+        title: "Scythulator",
+        text: `My first project. There is a really cool boardgame called Scythe, but when you finish the game it
+                takes a lot of time to count your points
+                ,so I made this website to make it really easy!`,
+        git: "https://github.com/hide85x/Scythulator",
+        live: "https://hide85x.github.io/Scythulator/",
       },
     ],
   }),

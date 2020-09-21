@@ -1,5 +1,5 @@
-<template>
-  <v-card class="py-9" dark outlined>
+<template >
+  <v-card  id="techstack" class="py-9" dark outlined>
     <v-card-title primary-title class="justify-center">
       <h1>TechStack</h1>
     </v-card-title>
@@ -9,13 +9,13 @@
         <v-expansion-panel-content class="blue-grey darken-1">
           <v-card-title primary-title>title</v-card-title>
           <v-card-text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quae sapiente ad impedit nesciunt aliquam quaerat! Minus iusto quidem cumque repudiandae facere a?</v-card-text>
-          <v-row>
+          <!-- <v-row>
             <v-img class="pa-2 ma-2 grey lighten-3" width="200" height="200" src="../assets/pics/node.png"></v-img>
             <v-img class="pa-2 ma-2 grey lighten-3" width="200" height="200" src="../assets/pics/node.png"></v-img>
             <v-img class="pa-2 ma-2 grey lighten-3" width="200" height="200" src="../assets/pics/node.png"></v-img>
             <v-img class="pa-2 ma-2 grey lighten-3" width="200" height="200" src="../assets/pics/node.png"></v-img>
             <v-img class="pa-2 ma-2 grey lighten-3" width="200" height="200" src="../assets/pics/node.png"></v-img>
-          </v-row>
+          </v-row> -->
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
@@ -24,9 +24,15 @@
 
 <script>
 export default {
-  data: () => ({}),
+  data: () => ({
+    techstack: {
+      frontend:['html, css, js(es6), typescript','vue'],
+      backend: ['node', 'express', 'nestJs', 'ORM', 'unit tests'],
+      database:['mongoDb', 'mySql', 'PostrgeSql']
+    }
+  }),
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 </style>
