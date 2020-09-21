@@ -51,7 +51,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" >
 html, *, body {
   box-sizing: border-box  !important;
 }
@@ -59,5 +59,8 @@ a {
   text-decoration: none !important;
   text-emphasis-color: none !important;
   color: rgb(255, 0, 85)!important;
+  &:hover {
+    color: red !important;
+  }
 }
 </style>

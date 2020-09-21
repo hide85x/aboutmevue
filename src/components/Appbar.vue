@@ -6,7 +6,6 @@
       overlay-opacity="0.7"
       temporary
       fixed
-     
       src="../assets/pics/bg/pexels-photo-4173624.jpeg"
       v-model="drawer"
     >
@@ -16,7 +15,7 @@
             <v-icon id="arrow" x-large hover color="black" @click="drawer= !drawer">mdi-arrow-right</v-icon>
           </v-list-item>
 
-          <v-list-item link>
+         <a href="mailto:hide85x@gmail.com"><v-list-item link>
             <v-list-item-content id="li">
               <v-list-item-title class="title">Lukasz Pelc</v-list-item-title>
               <v-list-item-subtitle>hide85x@gmail.com</v-list-item-subtitle>
@@ -25,22 +24,22 @@
               <v-icon large color="pink">mdi-mail</v-icon>
               <!-- <img src="../assets/pics/me.jpg" alt="alt" /> -->
             </v-avatar>
-          </v-list-item>
+          </v-list-item></a> 
         </v-list>
         <v-divider></v-divider>
-        <v-list-item-group active-class="pink--text ">
-          <v-list-item v-for="i in icons" :key="i">
-            <v-list-item-icon class="my-6">
-              <v-icon py-15 large>{{i.i}}</v-icon>
+        <v-list-item-group active-class="pink--text "  v-for="i in icons" :key="i.i">
+        <a target="blank" :href="i.link">  <v-list-item id="item" class="d-flex-row">
+           <v-list-item-icon  class="my-6">
+            <v-icon id="icon" py-15 large>{{i.i}}</v-icon>
             </v-list-item-icon>
             <v-list-item-title>{{i.txt}}</v-list-item-title>
-          </v-list-item>
+          </v-list-item></a>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
 
     <v-app-bar
-    id="appbar"
+      id="appbar"
       dark
       shrink-on-scroll
       height="200px"
@@ -53,8 +52,10 @@
       <!-- <v-toolbar-title  class="d-md-none d-flex" >Get in Touch!</v-toolbar-title> -->
 
       <div class="ml-auto align-self-end">
-        <v-btn v-for="l in links" id="links" :key="l" class="mx-11 pa-6 black white--text" icon>
-          <a href="https://www.facebook.com/"><v-icon class="ml-14" id="icon" size="15px"> {{l}}</v-icon></a> 
+        <v-btn v-for="l in links" id="links" :key="l.id" class="mx-11 pa-6 black white--text" icon>
+          <a href="#" target="blank">
+            <v-icon class="ml-14" id="icon" size="15px">{{l}}</v-icon>
+          </a>
         </v-btn>
       </div>
     </v-app-bar>
@@ -70,10 +71,27 @@ export default {
       drawer: false,
       links: ["aboutme", "projects", "techstack", "footer"],
       icons: [
-        { txt: "facebook", i: "mdi-facebook" },
-        { txt: "linkedIn", i: "mdi-linkedin" },
-        { txt: "insta", i: "mdi-instagram" },
-        {txt:'github', i: 'mdi-github'}
+        {
+          txt: "facebook",
+          i: "mdi-facebook",
+          link: "https://www.facebook.com/RebelMonstah/",
+        },
+
+        {
+          txt: "linkedIn",
+          i: "mdi-linkedin",
+          link: "https://www.linkedin.com/in/%C5%82ukasz-pelc-93aa31177/",
+        },
+        {
+          txt: "insta",
+          i: "mdi-instagram",
+          link: "https://www.instagram.com/shalashaska85x/?hl=en",
+        },
+        {
+          txt: "github",
+          i: "mdi-github",
+          link: "https://github.com/hide85x",
+        },
       ],
     };
   },
@@ -92,10 +110,12 @@ export default {
 #li {
   display: flex !important;
 }
+#item:hover, #icon:hover{
+color: rgb(255, 0, 128) !important;
+}
+
 @media (max-width: 700px) {
-    #appbar {
-        
-    }
+
   #links {
     margin: 0 !important;
     margin: 0 10px !important;
@@ -103,7 +123,7 @@ export default {
   #icon {
     font-size: 10px !important;
     margin: 0 0 0 20px !important;
-    transform:scale(1) !important
+    transform: scale(1) !important;
   }
 }
 </style>
