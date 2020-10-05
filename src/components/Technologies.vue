@@ -42,6 +42,8 @@ export default {
           "js(es6)",
           
           "vue",
+          "vuex",
+          "vuetify"
         ],
       },
       {
