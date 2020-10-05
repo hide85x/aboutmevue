@@ -11,7 +11,11 @@
       data bases I discovered a lot more can be done with use of java script! I'm also keenly interested
       in the Internet Of Things world, and with my RaspberryPi I'm trying to connect my JS with the outside world ;)
     </v-card-text>
-    <v-slide-group id="carousel" v-model="model" class="pa-4">
+    <v-slide-group id="carousel" 
+    v-model="model"
+    center-active
+      show-arrows
+    class="pa-4">
       <v-slide-item v-for="pro in projects" :key="pro.id" v-slot:default="{ active, toggle }">
         <v-card
           id="card"
@@ -32,20 +36,23 @@
     </v-slide-group>
 
     <v-expand-transition>
-      <v-sheet v-if="model != null" class="align-center" color="grey darken-4" height="300" tile>
+      <v-sheet id="slideContent" v-if="model != null" class="align-center" color="grey darken-4" height="300" tile>
         <v-row class="d-flex flex-column align-center pa-1 text-center">
           <v-card-title primary-title class="my-0 py-0">
-            {{x.title}}
+            {{activeSlide.title}}
           </v-card-title>
-          <v-card-text id="content" class="overline px-6 text-caption">{{x.text}}</v-card-text>
+          <v-card-text id="content" class="overline px-6 text-caption">{{activeSlide.text}}</v-card-text>
           <div class="d-inline-flex align-items-end">
+            live
             <v-btn icon rounded class="mx-2 pa-6 black white--text">
-              <a target="blank" :href="x.live">
+              <a target="blank" :href="activeSlide.live">
                 <v-icon id="i" size="34">mdi-movie-open-outline</v-icon>
               </a>
             </v-btn>
+            code
             <v-btn icon rounded class="mx-2 pa-6 black white--text">
-              <a target="blank" :href="x.git">
+              
+              <a target="blank" :href="activeSlide.git">
                 <v-icon id="i" size="34">mdi-github</v-icon>
               </a>
             </v-btn>
@@ -86,6 +93,13 @@ export default {
         live:
           "https://hide85x.github.io/KaKo/?fbclid=IwAR1YsQn00GKRIQ7rLUE-JPvpi08bPd09pniiC-F9FbL3bDv4WAEWWU5oX4s",
       },
+            {
+              src: require("../assets/pics/shopmongo.jpg"),
+              title: "Shop",
+              text: `online shop that uses; node, express, mongoose and some npm third party packgages!`,
+              git: "https://github.com/hide85x/NodeMongoShopApp",
+              live: "https://node-mongo-shop-app.herokuapp.com/",
+            },
       {
         src: require("../assets/pics/spacer L.jpg"),
         title:"Spacer",
@@ -111,10 +125,17 @@ export default {
         git: "https://github.com/hide85x/Scythulator",
         live: "https://hide85x.github.io/Scythulator/",
       },
+      {
+        src: require("../assets/pics/speech-thumb_large.jpg"),
+        title: "SpeechSynth",
+        text: `Speech synthesator made with jquery and javascript.`,
+        git: "https://hide85x.github.io/SpeechSynth/",
+        live: "https://hide85x.github.io/SpeechSynth/",
+      },
     ],
   }),
   computed: {
-    x() {
+    activeSlide() {
       console.log(this.model);
       if (this.model == 0) {
         return (this.modal = this.projects[0]);
@@ -131,6 +152,15 @@ export default {
       if (this.model == 4) {
         return (this.modal = this.projects[4]);
       }
+      if (this.model == 5) {
+        return (this.modal = this.projects[5]);
+      }
+      if (this.model == 6) {
+        return (this.modal = this.projects[6]);
+      }
+      if (this.model == 7) {
+        return (this.modal = this.projects[7]);
+      }
     },
   },
 };
@@ -140,6 +170,9 @@ export default {
 @media (max-width: 600px) {
   #card {
     width: 300px !important;
+  }
+  #slideContent{
+    height:200px !important
   }
   #carousel {
     width: 100%;
