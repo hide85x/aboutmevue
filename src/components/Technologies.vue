@@ -39,7 +39,9 @@ export default {
           "html",
           "css(scss)",
           "bootstrap",
+          "materialize",
           "js(es6)",
+          "jQuery",
           
           "vue",
           "vuex",
@@ -55,7 +57,7 @@ export default {
           "express",
           "nestJs",
           "ORM",
-          "unit testing",
+          "unit testing (Mocha Chai Sinon)",
           "websockets",
         ],
       },
