@@ -96,7 +96,7 @@ export default {
             {
               src: require("../assets/pics/shopmongo.jpg"),
               title: "Shop",
-              text: `online shop that uses; node, express, mongoose and some npm third party packgages!`,
+              text: `online shop that uses; node, express, mongoose and some npm third party packgages for authentication, payment, email sending etc!`,
               git: "https://github.com/hide85x/NodeMongoShopApp",
               live: "https://node-mongo-shop-app.herokuapp.com/",
             },
