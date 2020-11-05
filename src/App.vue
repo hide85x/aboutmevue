@@ -5,27 +5,27 @@
     <Appbar/>
   <v-parallax
     height="400"
-    src="./assets/pics/bg/pexels-photo-167699.webp"
+    src="./assets/pics/bg/pexels-photo-167699.jpeg"
   >
   </v-parallax>
     <About/>
   <v-parallax
     height="300"
-    src="./assets/pics/bg/pexels-photo-167699.webp"
+    src="./assets/pics/bg/pexels-photo-167699.jpeg"
   >
   </v-parallax>
 
     <Projects/>
    <v-parallax
     height="300"
-    src="./assets/pics/bg/pexels-photo-167699.webp"
+    src="./assets/pics/bg/pexels-photo-167699.jpeg"
   >
   </v-parallax>
 
     <Techs/>
    <v-parallax
     height="300"
-    src="./assets/pics/bg/pexels-photo-167699.webp"
+    src="./assets/pics/bg/pexels-photo-167699.jpeg"
   >
   </v-parallax>
 
