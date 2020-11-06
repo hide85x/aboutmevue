@@ -57,9 +57,13 @@ export default {
           "express",
           "nestJs",
           "ORM",
-          "unit testing (Mocha Chai Sinon)",
+          // "unit testing (Mocha Chai Sinon)",
           "websockets",
         ],
+      },
+      {
+        title: "tests",
+        techs: ["postman", "mocha", "chai", "sinon", "puppeteer", "devTools"]
       },
       { title: "database", techs: ["mongoDb", "mySql", "PostrgeSql"] },
     ],
