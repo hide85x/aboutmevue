@@ -56,11 +56,13 @@ export default {
         techs: [
           "node",
           "typescript",
-          "handlebars",
           "express",
           "nestJs",
           "TypeORM",
           "websockets",
+          'restApi',
+          'graphQl'
+
         ],
       },
       {
@@ -68,6 +70,7 @@ export default {
         techs: ["postman", "mocha", "chai","jest", "sinon", "puppeteer", "devTools", "Vue test utils", "Vue testing library"]
       },
       { title: "database", techs: ["mongoDb", "mySql", "postrgeSql", "firebase"] },
+      {title: "others", techs: ['docker', 'rancher', "Ci/Cd"]}
     ],
   }),
 };
