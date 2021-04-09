@@ -45,7 +45,10 @@ export default {
           
           "vue",
           "vuex",
-          "vuetify"
+          "vuetify",
+          "coreUi",
+
+          "webflow"
         ],
       },
       {
@@ -56,16 +59,15 @@ export default {
           "handlebars",
           "express",
           "nestJs",
-          "ORM",
-          // "unit testing (Mocha Chai Sinon)",
+          "TypeORM",
           "websockets",
         ],
       },
       {
         title: "tests",
-        techs: ["postman", "mocha", "chai", "sinon", "puppeteer", "devTools"]
+        techs: ["postman", "mocha", "chai","jest", "sinon", "puppeteer", "devTools", "Vue test utils", "Vue testing library"]
       },
-      { title: "database", techs: ["mongoDb", "mySql", "PostrgeSql"] },
+      { title: "database", techs: ["mongoDb", "mySql", "postrgeSql", "firebase"] },
     ],
   }),
 };
