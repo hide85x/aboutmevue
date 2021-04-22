@@ -4,12 +4,14 @@
 
     <Appbar/>
   <v-parallax
+  id="parallax"
     height="400"
     src="./assets/pics/bg/pexels-photo-167699.jpeg"
   >
   </v-parallax>
     <About/>
   <v-parallax
+  id="parallax"
     height="300"
     src="./assets/pics/bg/pexels-photo-167699.jpeg"
   >
@@ -17,6 +19,7 @@
 
     <Projects/>
    <v-parallax
+   id="parallax"
     height="300"
     src="./assets/pics/bg/pexels-photo-167699.jpeg"
   >
@@ -24,6 +27,7 @@
 
     <Techs/>
    <v-parallax
+   id="parallax"
     height="300"
     src="./assets/pics/bg/pexels-photo-167699.jpeg"
   >
@@ -63,5 +67,11 @@ a {
   &:hover {
     color: red !important;
   }
+}
+#parallax {
+ @media (max-width:700px) {
+   height: 200px !important;
+   
+ }
 }
 </style>
