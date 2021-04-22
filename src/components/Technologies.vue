@@ -1,5 +1,5 @@
 <template >
-  <v-card id="techstack" class="py-9" dark outlined>
+  <v-sheet id="techstack" class="py-9" dark >
     <v-card-title primary-title class="justify-center">
       <h4>What I use</h4>
     </v-card-title>
@@ -26,55 +26,20 @@
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
-  </v-card>
+  </v-sheet>
 </template>
 
 <script>
+import {techstack} from '../utills/techstack'
 export default {
   data: () => ({
-    techstack: [
-      {
-        title: "frontend",
-        techs: [
-          "html",
-          "css(scss)",
-          "bootstrap",
-          "materialize",
-          "js(es6)",
-          "jQuery",
-          
-          "vue",
-          "vuex",
-          "vuetify",
-          "coreUi",
-
-          "webflow"
-        ],
-      },
-      {
-        title: "backend",
-        techs: [
-          "node",
-          "typescript",
-          "express",
-          "nestJs",
-          "TypeORM",
-          "websockets",
-          'restApi',
-          'graphQl'
-
-        ],
-      },
-      {
-        title: "tests",
-        techs: ["postman", "mocha", "chai","jest", "sinon", "puppeteer", "devTools", "Vue test utils", "Vue testing library"]
-      },
-      { title: "database", techs: ["mongoDb", "mySql", "postrgeSql", "firebase"] },
-      {title: "others", techs: ['docker', 'rancher', "Ci/Cd"]}
-    ],
+    techstack: techstack
   }),
 };
 </script>
 
 <style lang="scss" scoped>
+#techstack {
+  border-radius: none !important;
+}
 </style>

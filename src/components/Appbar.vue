@@ -52,9 +52,9 @@
       <!-- <v-toolbar-title  class="d-md-none d-flex" >Get in Touch!</v-toolbar-title> -->
 
       <div class="ml-auto align-self-end">
-        <v-btn v-for="l in links" id="links" :key="l.id" class="mx-11 pa-6 black white--text" icon>
+        <v-btn v-for="l in links" id="links" :key="l.id" class="mx-11 pa-0 black" icon>
           <a :href="'#'+l" >
-            <v-icon class="ml-14" id="icon" size="17px">{{l}}</v-icon>
+            <v-icon class="ml-15 pa-5" id="icon" size="17px">{{l}}</v-icon>
           </a>
         </v-btn>
       </div>
@@ -101,14 +101,17 @@ export default {
 <style lang="scss" scoped>
 #arrow:hover,
 #links:hover {
-  transform: rotate(360deg) scale(1.2);
-  color: rgb(253, 34, 71) !important;
+  transform: rotate(360deg) scale(1.1);
+  color: rgb(255, 0, 128)!important;
 }
 #drawer {
   box-shadow: 0 0 6px 2px rgb(214, 214, 214) !important;
 }
 #li {
   display: flex !important;
+}
+a {
+  color:white !important
 }
 #item:hover, #icon:hover{
 color: rgb(255, 0, 128) !important;

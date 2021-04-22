@@ -55,7 +55,6 @@ export const projects= [
         live: "https://hide85x.github.io/BaDumTss/",
       },
 
-     
       {
         src: require("../assets/pics/speech-thumb_large.jpg"),
         title: "SpeechSynth",

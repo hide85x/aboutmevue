@@ -129,6 +129,9 @@ export default {
       if (this.model == 7) {
         return (this.modal = this.projects[7]);
       }
+      if (this.model == 8) {
+        return (this.modal = this.projects[8]);
+      }
     },
   },
 };

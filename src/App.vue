@@ -26,12 +26,12 @@
   </v-parallax>
 
     <Techs/>
-   <v-parallax
+   <!-- <v-parallax
    id="parallax"
     height="300"
     src="./assets/pics/bg/pexels-photo-167699.jpeg"
   >
-  </v-parallax>
+  </v-parallax> -->
 
     <Footer/>
   </v-app>
@@ -63,9 +63,10 @@ html, *, body {
 a {
   text-decoration: none !important;
   text-emphasis-color: none !important;
-  color: rgb(255, 0, 85)!important;
+  color: rgb(255, 0, 128)!important;
   &:hover {
-    color: red !important;
+    color: rgb(255, 0, 128)!important;
+;
   }
 }
 #parallax {
