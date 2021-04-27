@@ -10,14 +10,13 @@
       >let's talk about what I do</v-card-title
     >
     <v-card-text id="content" class="overline pa-6 text-center">
-      For over a year now, through various crash courses, books, youtube
+      For over two years now, through various crash courses, books, youtube
       lectures, IT meetings and my own ways around the code, I'm trying to learn
       the best practices for software development, after this time I'm starting
       to have more clear vision about what I want to learn, what tools and
       technologies would be most useful for me and what I would like to do with
       that knowledge in the future projects. I'm constantly learning web
-      technologies(html, css, java script, jquery, vue, materialize, bootstrap),
-      but with the use of NodeJs, express, template engines and MongoDB data
+      technologies, but with the use of NodeJs, express, template engines and MongoDB data
       bases I discovered a lot more can be done with use of java script! I'm
       also keenly interested in the Internet Of Things world, and with my
       RaspberryPi I'm trying to connect my JS with the outside world ;)
