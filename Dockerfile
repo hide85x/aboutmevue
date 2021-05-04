@@ -8,7 +8,6 @@ COPY . .
 
 
 RUN npm run build
-RUN npm run test:unit
 
 
 FROM nginx:1.18.0-alpine as production-stage
